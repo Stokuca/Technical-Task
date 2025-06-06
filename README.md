@@ -1,6 +1,44 @@
-# Getting Started with Create React App
+# Getting Started with AI Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple dashboard app for managing reports. It was built with React, TypeScript, Zustand, and Material UI. Users can create, edit, summarize, and organize reports using drag & drop. All data is stored locally in the browser using localStorage.
+
+## Available Features
+
+In this app, you can:
+
+### Create a New Report
+
+Use the rich text editor to write a report with a title and content, then save it.
+
+### Edit Existing Reports
+
+Click the "Edit" button to load a report back into the form, make changes, and save it again.
+
+### AI Summary Simulation
+
+Click the "Summarize" button to simulate an AI-generated summary. This updates the report content and logs the activity.
+
+### Activity Logs
+
+Each report keeps a short log of actions (created, edited, summarized). You can click "View Log" to see it in a modal window.
+
+### Drag & Drop Support
+
+Reorder your reports by dragging them. Changes are saved automatically.
+
+### LocalStorage Support
+
+All reports and their order are saved to your browser, so they will still be there when you refresh.
+
+### Search
+
+Filter reports by typing into the search field. It filters live by title.
+
+### Clear All
+
+Click "Clear All" to remove all reports and reset the dashboard.
+
+---
 
 ## Available Scripts
 
@@ -8,39 +46,49 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in development mode.  
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.  
+The build is optimized and ready to be deployed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm test`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Runs all tests using Jest and React Testing Library.
 
-### `npm run eject`
+### `npm run storybook`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Starts Storybook for viewing components in isolation.  
+Open [http://localhost:6006](http://localhost:6006) to view it in your browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project uses:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React & TypeScript
+- Zustand (state management)
+- TinyMCE (rich text editor)
+- Material UI
+- DnD Kit (drag and drop)
+
+All data is stored using `localStorage`, so no backend is required.
+
+---
+
+## Testing
+
+Tests are written using Jest and React Testing Library.  
+Test coverage includes:
+
+- ReportEditor
+- ReportCard
+- ReportListDraggable
+
+To run tests:
+
+```bash
+npm test
