@@ -12,6 +12,8 @@ import {
 } from '@mui/material';
 import { Report } from '../types/report';
 
+//Pristup kodu je svakako mogao biti jos modularniji u nekom realnom projektu mozda bi smo i UI komponente postavili na npm paket
+
 interface Props {
   report: Report;
   onEdit: (report: Report) => void;
